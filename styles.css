@@ -1,0 +1,79 @@
+/* Global variables  */
+:root {
+  --prim-clr: hsl(306, 62%, 45%);
+  --sec-clr: hsl(278, 67%, 41%);
+  --tert-clr: hsl(from var(--prim-clr) h s calc(l - 10));
+  --back-clr: hsl(305, 29%, 9%);
+  --body-font: Arial, Helvetica, sans-serif;
+  /* for testing av andre farger og kor synlig dei er */
+  /* filter: hue-rotate(0deg) grayscale(); */
+}
+
+/* Global attributes*/
+body {
+  font-family: var(--body-font);
+  background-color: var(--back-clr);
+  color: var(--prim-clr);
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+p {
+  font-size: 0.8em;
+  color: var(--tert-clr);
+}
+
+button {
+  transition: 1s;
+  background: var(--sec-clr);
+  color: hsl(from var(--sec-clr) calc(h + 180) s calc(l + 5));
+}
+
+button:hover {
+  transform: scale(1.1);
+  /* filter: brightness(150%) hue-rotate(20deg); */
+  background: hsl(from var(--sec-clr) calc(h + 10) s calc(l + 10));
+}
+
+/* Styling classes */
+.secondaryText {
+  color: var(--tert-clr);
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.halfWidth {
+  width: 50%;
+}
+
+.fifthWidth {
+  width: 20%;
+}
+
+/*Footer*/
+footer {
+  border: var(--prim-clr);
+  border-style: dashed;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--sec-clr);
+}
+
+footer img {
+  width: 20px;
+}
+
+/* Div useful @media */
+/* @media (max-width: 768px) {} */
