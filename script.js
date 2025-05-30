@@ -41,6 +41,18 @@ function populateUnitSelectors(category) {
 
    fromUnitSelect.appendChild(option1);
    toUnitSelect.appendChild(option2);
+
+// Lar siden starte med dei mest typiske enhetene istede for at begge selectorene starter med første verdien på listen 
+   if (category === "temperature") {
+      fromUnitSelect.value = "celsius";
+      toUnitSelect.value = "fahrenheit";
+     } else if (category === "length") {
+      fromUnitSelect.value = "km";
+      toUnitSelect.value = "meter";
+     } else {
+      fromUnitSelect.value = "kg";
+      toUnitSelect.value = "gram";
+     }
   });
 }
 
@@ -59,7 +71,7 @@ function convert() {
    result = inBase / conversions[category][to];
   }
 
-  //Bruker toFixed for å kunne sette ein max på siffer som kan vises, og bruker parseFloat for å bli kvitt unnødvendige "trailing zero's"
+  //Bruker toFixed for å kunne sette ein max på siffer som kan vises, og bruker parseFloat for å bli kvitt unnødvendige "trailing zero's".
   resultDisplay.textContent = parseFloat(result.toFixed(12));
 }
 
