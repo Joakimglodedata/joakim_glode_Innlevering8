@@ -71,8 +71,8 @@ function convert() {
    result = inBase / conversions[category][to];
   }
 
-  //Bruker toFixed for å kunne sette ein max på siffer som kan vises, og bruker parseFloat for å bli kvitt unnødvendige "trailing zero's".
-  resultDisplay.textContent = parseFloat(result);
+  //Started med toFixed men det førte til unnødvendige "trailing zero's", fant ikkje ein god og lett måte å sette ein maks mengde siffer så da blir det bare parseFloat 
+  resultDisplay.textContent = parseFloat(result).maxlength;
 }
 
 function convertTemperature(value, from, to) {
