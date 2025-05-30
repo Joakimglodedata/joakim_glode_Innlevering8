@@ -62,9 +62,13 @@ button:hover {
   background-color: rgb(17, 68, 17);
 }
 
+.calculator > div {
+ margin-bottom: 8px;
+}
+
 .fraTil {
   display: flex;
-  column-gap: 50px;
+  justify-content: space-between;
 }
 /*Footer*/
 footer {
