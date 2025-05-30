@@ -16,7 +16,7 @@ const conversions = {
    cm: 0.01, 
    meter: 1,
    km: 1000,
-   mil: 1609.34,
+   mil: 1609.344,
    fot: 0.3048
   },
   weight: {
@@ -72,7 +72,7 @@ function convert() {
   }
 
   //Bruker toFixed for å kunne sette ein max på siffer som kan vises, og bruker parseFloat for å bli kvitt unnødvendige "trailing zero's".
-  resultDisplay.textContent = parseFloat(result.toFixed(12));
+  resultDisplay.textContent = parseFloat(result);
 }
 
 function convertTemperature(value, from, to) {
